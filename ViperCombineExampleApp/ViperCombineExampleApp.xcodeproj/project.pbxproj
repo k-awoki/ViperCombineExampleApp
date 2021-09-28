@@ -15,6 +15,9 @@
 		5ECC2FA427027F4800F4F50D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECC2FA227027F4800F4F50D /* LaunchScreen.storyboard */; };
 		5ECC2FAF27027F4900F4F50D /* ViperCombineExampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FAE27027F4900F4F50D /* ViperCombineExampleAppTests.swift */; };
 		5ECC2FBA27027F4900F4F50D /* ViperCombineExampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FB927027F4900F4F50D /* ViperCombineExampleAppUITests.swift */; };
+		5ECC2FCA2702843F00F4F50D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FC92702843F00F4F50D /* ApiClient.swift */; };
+		5ECC2FCD270285C200F4F50D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FCC270285C200F4F50D /* User.swift */; };
+		5ECC2FD127028D5B00F4F50D /* ApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FD027028D5B00F4F50D /* ApiResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		5ECC2FB527027F4900F4F50D /* ViperCombineExampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperCombineExampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECC2FB927027F4900F4F50D /* ViperCombineExampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperCombineExampleAppUITests.swift; sourceTree = "<group>"; };
 		5ECC2FBB27027F4900F4F50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ECC2FC92702843F00F4F50D /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		5ECC2FCC270285C200F4F50D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5ECC2FD027028D5B00F4F50D /* ApiResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,8 @@
 		5ECC2F9627027F4600F4F50D /* ViperCombineExampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				5ECC2F9727027F4600F4F50D /* AppDelegate.swift */,
-				5ECC2F9927027F4600F4F50D /* SceneDelegate.swift */,
-				5ECC2F9B27027F4600F4F50D /* ViewController.swift */,
+				5ECC2FD22702982700F4F50D /* Presention */,
+				5ECC2FC72702840C00F4F50D /* Data */,
 				5ECC2F9D27027F4600F4F50D /* Main.storyboard */,
 				5ECC2FA027027F4800F4F50D /* Assets.xcassets */,
 				5ECC2FA227027F4800F4F50D /* LaunchScreen.storyboard */,
@@ -126,6 +131,58 @@
 				5ECC2FBB27027F4900F4F50D /* Info.plist */,
 			);
 			path = ViperCombineExampleAppUITests;
+			sourceTree = "<group>";
+		};
+		5ECC2FC72702840C00F4F50D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5ECC2FCB270285AE00F4F50D /* Entity */,
+				5ECC2FCE27028CDE00F4F50D /* Api */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5ECC2FC82702842600F4F50D /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				5ECC2FC92702843F00F4F50D /* ApiClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		5ECC2FCB270285AE00F4F50D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5ECC2FCC270285C200F4F50D /* User.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5ECC2FCE27028CDE00F4F50D /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				5ECC2FCF27028CEA00F4F50D /* Request */,
+				5ECC2FC82702842600F4F50D /* Client */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		5ECC2FCF27028CEA00F4F50D /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				5ECC2FD027028D5B00F4F50D /* ApiResource.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		5ECC2FD22702982700F4F50D /* Presention */ = {
+			isa = PBXGroup;
+			children = (
+				5ECC2F9727027F4600F4F50D /* AppDelegate.swift */,
+				5ECC2F9927027F4600F4F50D /* SceneDelegate.swift */,
+				5ECC2F9B27027F4600F4F50D /* ViewController.swift */,
+			);
+			path = Presention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +317,10 @@
 			files = (
 				5ECC2F9C27027F4600F4F50D /* ViewController.swift in Sources */,
 				5ECC2F9827027F4600F4F50D /* AppDelegate.swift in Sources */,
+				5ECC2FD127028D5B00F4F50D /* ApiResource.swift in Sources */,
 				5ECC2F9A27027F4600F4F50D /* SceneDelegate.swift in Sources */,
+				5ECC2FCD270285C200F4F50D /* User.swift in Sources */,
+				5ECC2FCA2702843F00F4F50D /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
