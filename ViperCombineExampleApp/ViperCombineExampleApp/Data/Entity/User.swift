@@ -7,14 +7,12 @@
 
 import Foundation
 
+/// ユーザー
 struct User: Codable {
+    ///　ログイン名
     let loginName: String
-    let followers: Int
-    let following: Int
 
     enum CodingKeys: String, CodingKey {
         case loginName = "login"
-        case followers
-        case following
     }
 }

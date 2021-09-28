@@ -20,6 +20,9 @@
 		5ECC2FD127028D5B00F4F50D /* ApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FD027028D5B00F4F50D /* ApiResource.swift */; };
 		5ECC2FD827029AA500F4F50D /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FD727029AA500F4F50D /* RootRouter.swift */; };
 		5ECC2FDB27029C3300F4F50D /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FDA27029C3300F4F50D /* UserListRouter.swift */; };
+		5ECC2FE12702D76B00F4F50D /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FE02702D76B00F4F50D /* UserListInteractor.swift */; };
+		5ECC2FE42703CDD000F4F50D /* GitHubUserListApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FE32703CDD000F4F50D /* GitHubUserListApiResource.swift */; };
+		5ECC2FE62703D31C00F4F50D /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2FE52703D31C00F4F50D /* UserListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		5ECC2FD027028D5B00F4F50D /* ApiResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResource.swift; sourceTree = "<group>"; };
 		5ECC2FD727029AA500F4F50D /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		5ECC2FDA27029C3300F4F50D /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
+		5ECC2FE02702D76B00F4F50D /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
+		5ECC2FE32703CDD000F4F50D /* GitHubUserListApiResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserListApiResource.swift; sourceTree = "<group>"; };
+		5ECC2FE52703D31C00F4F50D /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 				5ECC2FD22702982700F4F50D /* Presention */,
 				5ECC2FD42702999C00F4F50D /* Domain */,
 				5ECC2FC72702840C00F4F50D /* Data */,
+				5ECC2FD627029A9A00F4F50D /* Router */,
 				5ECC2FA027027F4800F4F50D /* Assets.xcassets */,
 				5ECC2FA227027F4800F4F50D /* LaunchScreen.storyboard */,
 				5ECC2FA527027F4800F4F50D /* Info.plist */,
@@ -175,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				5ECC2FD027028D5B00F4F50D /* ApiResource.swift */,
+				5ECC2FE32703CDD000F4F50D /* GitHubUserListApiResource.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -192,8 +200,8 @@
 		5ECC2FD32702986700F4F50D /* UserList */ = {
 			isa = PBXGroup;
 			children = (
-				5ECC2F9B27027F4600F4F50D /* UserListViewController.swift */,
-				5ECC2F9D27027F4600F4F50D /* UserListViewController.storyboard */,
+				5ECC2FDC2702D69300F4F50D /* View */,
+				5ECC2FDD2702D6FE00F4F50D /* Presenter */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -201,7 +209,7 @@
 		5ECC2FD42702999C00F4F50D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				5ECC2FD627029A9A00F4F50D /* Router */,
+				5ECC2FDE2702D73400F4F50D /* Interactor */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -213,6 +221,31 @@
 				5ECC2FDA27029C3300F4F50D /* UserListRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		5ECC2FDC2702D69300F4F50D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5ECC2F9B27027F4600F4F50D /* UserListViewController.swift */,
+				5ECC2F9D27027F4600F4F50D /* UserListViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5ECC2FDD2702D6FE00F4F50D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5ECC2FE52703D31C00F4F50D /* UserListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5ECC2FDE2702D73400F4F50D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5ECC2FE02702D76B00F4F50D /* UserListInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ECC2FE62703D31C00F4F50D /* UserListPresenter.swift in Sources */,
 				5ECC2F9C27027F4600F4F50D /* UserListViewController.swift in Sources */,
 				5ECC2F9827027F4600F4F50D /* AppDelegate.swift in Sources */,
 				5ECC2FD127028D5B00F4F50D /* ApiResource.swift in Sources */,
@@ -352,6 +386,8 @@
 				5ECC2F9A27027F4600F4F50D /* SceneDelegate.swift in Sources */,
 				5ECC2FD827029AA500F4F50D /* RootRouter.swift in Sources */,
 				5ECC2FCD270285C200F4F50D /* User.swift in Sources */,
+				5ECC2FE12702D76B00F4F50D /* UserListInteractor.swift in Sources */,
+				5ECC2FE42703CDD000F4F50D /* GitHubUserListApiResource.swift in Sources */,
 				5ECC2FCA2702843F00F4F50D /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -513,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

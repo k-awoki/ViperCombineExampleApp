@@ -26,7 +26,9 @@ final class UserListRouter: UserListWireframe {
                                                 bundle: nil).instantiateInitialViewController() as? UserListViewController else {
             fatalError()
         }
-
+        let interactor = UserListInteractor()
+        let presenter = UserListPresenter(interactor: interactor)
+        viewController.presenter = presenter
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }
