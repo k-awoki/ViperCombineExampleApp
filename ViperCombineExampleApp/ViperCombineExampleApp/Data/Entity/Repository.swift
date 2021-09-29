@@ -10,9 +10,5 @@ import Foundation
 /// リポジトリ
 struct Repository: Codable {
     /// リポジトリ名
-    let fullName: String
-
-    enum CodingKeys: String, CodingKey {
-        case fullName = "full_name"
-    }
+    let name: String
 }

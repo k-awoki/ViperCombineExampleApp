@@ -10,6 +10,7 @@ import Foundation
 /// GitHubUsesApiResource
 final class GitHubUsesApiResource: ApiResource {
     typealias ResponseType = [User]
+
     var baseUrl: URL {
         guard let url = URL(string: "https://api.github.com") else {
             fatalError()

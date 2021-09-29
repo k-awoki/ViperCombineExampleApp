@@ -1,5 +1,5 @@
 //
-//  UserRepositroyListInteractor.swift
+//  UserRepositoryListInteractor.swift
 //  ViperCombineExampleApp
 //
 //  Created by 青木孝乃輔 on 2021/09/29.
@@ -7,16 +7,22 @@
 
 import Combine
 
-/// UserRepositroyListInteractorUseCase
-protocol UserRepositroyListInteractorUseCase: AnyObject {
+/// UserRepositoryListInteractorUseCase
+protocol UserRepositoryListInteractorUseCase: AnyObject {
     /// fetch
     func fetch() -> AnyPublisher<[Repository], Error>
 }
 
-/// UserRepositroyListInteractor
-final class UserRepositroyListInteractor {
+/// UserRepositoryListInteractor
+final class UserRepositoryListInteractor {
+
+    // MARK: - Constants
+
     /// APIリソース
     private let resource: GitHubRepositoriesApiResource
+
+    // MARK: - Public Methods
+
     /// initialize
     /// - Parameter loginName: ログイン名
     init(loginName: String) {
@@ -24,8 +30,8 @@ final class UserRepositroyListInteractor {
     }
 }
 
-// MARK: - UserRepositroyListInteractorUseCase
-extension UserRepositroyListInteractor: UserRepositroyListInteractorUseCase {
+// MARK: - UserRepositoryListInteractorUseCase
+extension UserRepositoryListInteractor: UserRepositoryListInteractorUseCase {
     func fetch() -> AnyPublisher<[Repository], Error> {
         return Future<[Repository], Error> { [weak self] promise in
             guard let resource = self?.resource else {

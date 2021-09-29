@@ -1,64 +1,57 @@
 //
-//  UserListViewController.swift
+//  UserRepositoryListVieController.swift
 //  ViperCombineExampleApp
 //
-//  Created by 青木孝乃輔 on 2021/09/28.
+//  Created by 青木孝乃輔 on 2021/09/29.
 //
 
 import UIKit
 import Combine
 
-/// ユーザー一覧画面
-class UserListViewController: UIViewController {
+/// ユーザーリポジトリ一覧画面
+final class UserRepositoryListVieController: UIViewController {
 
     // MARK: - Variables
 
-    /// UserListPresenterInterface
-    var presenter: UserListPresenterInterface!
-    /// ユーザー一覧
-    private var users: [User] = []
+    /// UserRepositoryListPresenterInterface
+    var presenter: UserRepositoryListPresenterInterface!
+    /// リポジトリ一覧
+    private var repositories: [Repository] = []
     /// cancellables
     private var cancellables = [AnyCancellable]()
 
     // MARK: - Outlets
 
-    /// ユーザー一覧TableView
+    /// リポジトリ一覧TableView
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
-            let identifier = String(describing: UserCell.self)
+            let identifier = String(describing: RepositoryCell.self)
             let nib = UINib(nibName: identifier, bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: identifier)
         }
     }
 
-    // MARK: - Lifecycle Metohds
+    // MARK: - Lifecycle Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
         presenter.input?.viewDidLoadTrigger.send(())
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
-    }
 }
 
 // MARK: - Priavte Methods
-private extension UserListViewController {
+private extension UserRepositoryListVieController {
     /// bind
     func bind() {
-        presenter.output?.users
+        presenter.output?.repositories
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 if case .failure(let error) = completion {
                     print("error: \(error)")
                 }
             }, receiveValue: { [weak self] value in
-                self?.users = value
+                self?.repositories = value
                 self?.tableView.reloadData()
             })
             .store(in: &cancellables)
@@ -66,23 +59,16 @@ private extension UserListViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension UserListViewController: UITableViewDataSource {
+extension UserRepositoryListVieController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return repositories.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell", for: indexPath) as? RepositoryCell else {
             return UITableViewCell()
         }
-        cell.configure(with: users[indexPath.row])
+        cell.configure(with: repositories[indexPath.row])
         return cell
-    }
-}
-
-// MARK: - UITableViewDelegate
-extension UserListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.input?.didSelectUserTrigger.send(users[indexPath.row])
     }
 }

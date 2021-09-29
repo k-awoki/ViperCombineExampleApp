@@ -5,12 +5,15 @@
 //  Created by 青木孝乃輔 on 2021/09/29.
 //
 
+import Foundation
 import Combine
 
 /// UserListPresenterInput
 protocol UserListPresenterInput: AnyObject {
     /// ViewDidLoad
     var viewDidLoadTrigger: PassthroughSubject<Void, Never> { get }
+    /// didSelectRowAt
+    var didSelectUserTrigger: PassthroughSubject<User, Never> { get }
 }
 
 /// UserListPresenterOutput
@@ -31,16 +34,23 @@ protocol UserListPresenterInterface {
 final class UserListPresenter: UserListPresenterInterface, UserListPresenterInput, UserListPresenterOutput {
 
     // MARK: - Inputs
+
     var viewDidLoadTrigger = PassthroughSubject<Void, Never>()
+    var didSelectUserTrigger = PassthroughSubject<User, Never>()
 
     // MARK: - Outputs
+
     var users = CurrentValueSubject<[User], Error>([])
 
     // MARK: - Constants
-    /// interactor
+
+    /// Interactor
     private let interactor: UserListInteractorUseCase
+    /// Router
+    private let router: UserListWireframe
 
     // MARK: - Variables
+
     /// UserListPresenterInput
     weak var input: UserListPresenterInput? { return self }
     /// UserListPresenterOutput
@@ -49,10 +59,15 @@ final class UserListPresenter: UserListPresenterInterface, UserListPresenterInpu
     private var cancellables = [AnyCancellable]()
 
     // MARK: - Public Methods
+
     /// initialize
-    /// - Parameter interactor: UserListInteractorUseCase
-    init(interactor: UserListInteractorUseCase) {
+    /// - Parameters:
+    ///   - interactor: UserListInteractorUseCase
+    ///   - router: UserListWireframe
+    init(interactor: UserListInteractorUseCase,
+         router: UserListWireframe) {
         self.interactor = interactor
+        self.router = router
         bind()
     }
 }
@@ -70,6 +85,12 @@ private extension UserListPresenter {
                 }
             }, receiveValue: { [weak self] value in
                 self?.users.send(value)
+            })
+            .store(in: &cancellables)
+
+        didSelectUserTrigger
+            .sink(receiveValue: { [weak self] user in
+                self?.router.showRepositoryList(user)
             })
             .store(in: &cancellables)
     }

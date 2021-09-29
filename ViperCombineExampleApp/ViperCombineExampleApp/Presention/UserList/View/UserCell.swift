@@ -11,10 +11,12 @@ import UIKit
 final class UserCell: UITableViewCell {
 
     // MARK: - Outlets
+
     /// ユーザー名ラベル
     @IBOutlet private weak var userNameLabel: UILabel!
 
     // MARK: - Public Methods
+
     /// セルを構築
     /// - Parameter user: User
     func configure(with user: User) {

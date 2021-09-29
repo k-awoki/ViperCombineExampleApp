@@ -1,5 +1,5 @@
 //
-//  UserRepositroyListPresenter.swift
+//  UserRepositoryListPresenter.swift
 //  ViperCombineExampleApp
 //
 //  Created by 青木孝乃輔 on 2021/09/29.
@@ -7,58 +7,63 @@
 
 import Combine
 
-/// UserRepositroyListPresenterInput
-protocol UserRepositroyListPresenterInput: AnyObject {
+/// UserRepositoryListPresenterInput
+protocol UserRepositoryListPresenterInput: AnyObject {
     /// ViewDidLoad
     var viewDidLoadTrigger: PassthroughSubject<Void, Never> { get }
 }
 
-/// UserRepositroyListPresenterOutput
-protocol UserRepositroyListPresenterOutput: AnyObject {
+/// UserRepositoryListPresenterOutput
+protocol UserRepositoryListPresenterOutput: AnyObject {
     /// リポジトリ情報
     var repositories: CurrentValueSubject<[Repository], Error> { get }
 }
 
-/// UserRepositroyListPresenterInterface
-protocol UserRepositroyListPresenterInterface {
-    /// UserRepositroyListPresenterInput
-    var input: UserRepositroyListPresenterInput? { get }
-    /// UserRepositroyListPresenterOutput
-    var output: UserRepositroyListPresenterOutput? { get }
+/// UserRepositoryListPresenterInterface
+protocol UserRepositoryListPresenterInterface {
+    /// UserRepositoryListPresenterInput
+    var input: UserRepositoryListPresenterInput? { get }
+    /// UserRepositoryListPresenterOutput
+    var output: UserRepositoryListPresenterOutput? { get }
 }
 
-/// UserRepositroyListPresenter
-final class UserRepositroyListPresenter: UserRepositroyListPresenterInterface, UserRepositroyListPresenterInput, UserRepositroyListPresenterOutput {
+/// UserRepositoryListPresenter
+final class UserRepositoryListPresenter: UserRepositoryListPresenterInterface, UserRepositoryListPresenterInput, UserRepositoryListPresenterOutput {
 
     // MARK: - Inputs
+
     var viewDidLoadTrigger = PassthroughSubject<Void, Never>()
 
     // MARK: - Outputs
+
     var repositories = CurrentValueSubject<[Repository], Error>([])
 
     // MARK: - Constants
+
     /// interactor
-    private let interactor: UserRepositroyListInteractorUseCase
+    private let interactor: UserRepositoryListInteractorUseCase
 
     // MARK: - Variables
-    /// UserRepositroyListPresenterInput
-    weak var input: UserRepositroyListPresenterInput? { return self }
-    /// UserRepositroyListPresenterOutput
-    weak var output: UserRepositroyListPresenterOutput? { return self }
+
+    /// UserRepositoryListPresenterInput
+    weak var input: UserRepositoryListPresenterInput? { return self }
+    /// UserRepositoryListPresenterOutput
+    weak var output: UserRepositoryListPresenterOutput? { return self }
     /// cancellables
     private var cancellables = [AnyCancellable]()
 
     // MARK: - Public Methods
+
     /// initialize
-    /// - Parameter interactor: UserRepositroyListInteractorUseCase
-    init(interactor: UserRepositroyListInteractorUseCase) {
+    /// - Parameter interactor: UserRepositoryListInteractorUseCase
+    init(interactor: UserRepositoryListInteractorUseCase) {
         self.interactor = interactor
         bind()
     }
 }
 
 // MARK: - Private Methods
-private extension UserRepositroyListPresenter {
+private extension UserRepositoryListPresenter {
     /// Bind
     private func bind() {
         viewDidLoadTrigger

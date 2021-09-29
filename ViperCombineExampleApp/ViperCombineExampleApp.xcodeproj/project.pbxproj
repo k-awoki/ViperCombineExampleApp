@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		5E9264CE2703E4A6005F18A7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264CD2703E4A6005F18A7 /* UserCell.swift */; };
 		5E9264D02703E4C5005F18A7 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9264CF2703E4C5005F18A7 /* UserCell.xib */; };
-		5E9264D62703E9ED005F18A7 /* UserRepositroyListVieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264D52703E9ED005F18A7 /* UserRepositroyListVieController.swift */; };
-		5E9264D82703EA24005F18A7 /* UserRepositroyListVieController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9264D72703EA24005F18A7 /* UserRepositroyListVieController.storyboard */; };
+		5E9264D62703E9ED005F18A7 /* UserRepositoryListVieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264D52703E9ED005F18A7 /* UserRepositoryListVieController.swift */; };
+		5E9264D82703EA24005F18A7 /* UserRepositoryListVieController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9264D72703EA24005F18A7 /* UserRepositoryListVieController.storyboard */; };
 		5E9264DA2703EAF2005F18A7 /* GitHubRepositoriesApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264D92703EAF2005F18A7 /* GitHubRepositoriesApiResource.swift */; };
-		5E9264DC2703EBC3005F18A7 /* RepositoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264DB2703EBC3005F18A7 /* RepositoriesInteractor.swift */; };
+		5E9264DC2703EBC3005F18A7 /* UserRepositoryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264DB2703EBC3005F18A7 /* UserRepositoryListInteractor.swift */; };
 		5E9264DE2703EC6A005F18A7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264DD2703EC6A005F18A7 /* Repository.swift */; };
-		5E9264E02703EDD1005F18A7 /* UserRepositroyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264DF2703EDD1005F18A7 /* UserRepositroyListPresenter.swift */; };
+		5E9264E02703EDD1005F18A7 /* UserRepositoryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264DF2703EDD1005F18A7 /* UserRepositoryListPresenter.swift */; };
+		5E9264E22704294F005F18A7 /* UserRepositoryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264E12704294F005F18A7 /* UserRepositoryListRouter.swift */; };
+		5E9264E42704A28F005F18A7 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264E32704A28F005F18A7 /* RepositoryCell.swift */; };
+		5E9264E62704A2C3005F18A7 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9264E52704A2C3005F18A7 /* RepositoryCell.xib */; };
 		5ECC2F9827027F4600F4F50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2F9727027F4600F4F50D /* AppDelegate.swift */; };
 		5ECC2F9A27027F4600F4F50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2F9927027F4600F4F50D /* SceneDelegate.swift */; };
 		5ECC2F9C27027F4600F4F50D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2F9B27027F4600F4F50D /* UserListViewController.swift */; };
@@ -53,12 +56,15 @@
 /* Begin PBXFileReference section */
 		5E9264CD2703E4A6005F18A7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		5E9264CF2703E4C5005F18A7 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
-		5E9264D52703E9ED005F18A7 /* UserRepositroyListVieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositroyListVieController.swift; sourceTree = "<group>"; };
-		5E9264D72703EA24005F18A7 /* UserRepositroyListVieController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserRepositroyListVieController.storyboard; sourceTree = "<group>"; };
+		5E9264D52703E9ED005F18A7 /* UserRepositoryListVieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryListVieController.swift; sourceTree = "<group>"; };
+		5E9264D72703EA24005F18A7 /* UserRepositoryListVieController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserRepositoryListVieController.storyboard; sourceTree = "<group>"; };
 		5E9264D92703EAF2005F18A7 /* GitHubRepositoriesApiResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoriesApiResource.swift; sourceTree = "<group>"; };
-		5E9264DB2703EBC3005F18A7 /* RepositoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesInteractor.swift; sourceTree = "<group>"; };
+		5E9264DB2703EBC3005F18A7 /* UserRepositoryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryListInteractor.swift; sourceTree = "<group>"; };
 		5E9264DD2703EC6A005F18A7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		5E9264DF2703EDD1005F18A7 /* UserRepositroyListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositroyListPresenter.swift; sourceTree = "<group>"; };
+		5E9264DF2703EDD1005F18A7 /* UserRepositoryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryListPresenter.swift; sourceTree = "<group>"; };
+		5E9264E12704294F005F18A7 /* UserRepositoryListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryListRouter.swift; sourceTree = "<group>"; };
+		5E9264E32704A28F005F18A7 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		5E9264E52704A2C3005F18A7 /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		5ECC2F9427027F4600F4F50D /* ViperCombineExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperCombineExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECC2F9727027F4600F4F50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECC2F9927027F4600F4F50D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,20 +114,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E9264D12703E991005F18A7 /* UserRepositroyList */ = {
+		5E9264D12703E991005F18A7 /* UserRepositoryList */ = {
 			isa = PBXGroup;
 			children = (
 				5E9264D22703E99F005F18A7 /* View */,
 				5E9264D42703E9BC005F18A7 /* Presenter */,
 			);
-			path = UserRepositroyList;
+			path = UserRepositoryList;
 			sourceTree = "<group>";
 		};
 		5E9264D22703E99F005F18A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5E9264D52703E9ED005F18A7 /* UserRepositroyListVieController.swift */,
-				5E9264D72703EA24005F18A7 /* UserRepositroyListVieController.storyboard */,
+				5E9264D52703E9ED005F18A7 /* UserRepositoryListVieController.swift */,
+				5E9264D72703EA24005F18A7 /* UserRepositoryListVieController.storyboard */,
+				5E9264E32704A28F005F18A7 /* RepositoryCell.swift */,
+				5E9264E52704A2C3005F18A7 /* RepositoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,7 +137,7 @@
 		5E9264D42703E9BC005F18A7 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				5E9264DF2703EDD1005F18A7 /* UserRepositroyListPresenter.swift */,
+				5E9264DF2703EDD1005F18A7 /* UserRepositoryListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -235,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				5ECC2FD32702986700F4F50D /* UserList */,
-				5E9264D12703E991005F18A7 /* UserRepositroyList */,
+				5E9264D12703E991005F18A7 /* UserRepositoryList */,
 				5ECC2F9727027F4600F4F50D /* AppDelegate.swift */,
 				5ECC2F9927027F4600F4F50D /* SceneDelegate.swift */,
 			);
@@ -264,6 +272,7 @@
 			children = (
 				5ECC2FD727029AA500F4F50D /* RootRouter.swift */,
 				5ECC2FDA27029C3300F4F50D /* UserListRouter.swift */,
+				5E9264E12704294F005F18A7 /* UserRepositoryListRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -291,7 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				5ECC2FE02702D76B00F4F50D /* UserListInteractor.swift */,
-				5E9264DB2703EBC3005F18A7 /* RepositoriesInteractor.swift */,
+				5E9264DB2703EBC3005F18A7 /* UserRepositoryListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -402,7 +411,8 @@
 				5E9264D02703E4C5005F18A7 /* UserCell.xib in Resources */,
 				5ECC2FA427027F4800F4F50D /* LaunchScreen.storyboard in Resources */,
 				5ECC2FA127027F4800F4F50D /* Assets.xcassets in Resources */,
-				5E9264D82703EA24005F18A7 /* UserRepositroyListVieController.storyboard in Resources */,
+				5E9264E62704A2C3005F18A7 /* RepositoryCell.xib in Resources */,
+				5E9264D82703EA24005F18A7 /* UserRepositoryListVieController.storyboard in Resources */,
 				5ECC2F9F27027F4600F4F50D /* UserListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9264E02703EDD1005F18A7 /* UserRepositroyListPresenter.swift in Sources */,
+				5E9264E02703EDD1005F18A7 /* UserRepositoryListPresenter.swift in Sources */,
 				5ECC2FE62703D31C00F4F50D /* UserListPresenter.swift in Sources */,
 				5ECC2F9C27027F4600F4F50D /* UserListViewController.swift in Sources */,
 				5ECC2F9827027F4600F4F50D /* AppDelegate.swift in Sources */,
@@ -438,12 +448,14 @@
 				5ECC2FD827029AA500F4F50D /* RootRouter.swift in Sources */,
 				5ECC2FCD270285C200F4F50D /* User.swift in Sources */,
 				5E9264CE2703E4A6005F18A7 /* UserCell.swift in Sources */,
-				5E9264DC2703EBC3005F18A7 /* RepositoriesInteractor.swift in Sources */,
+				5E9264DC2703EBC3005F18A7 /* UserRepositoryListInteractor.swift in Sources */,
+				5E9264E42704A28F005F18A7 /* RepositoryCell.swift in Sources */,
 				5ECC2FE12702D76B00F4F50D /* UserListInteractor.swift in Sources */,
 				5E9264DE2703EC6A005F18A7 /* Repository.swift in Sources */,
 				5ECC2FE42703CDD000F4F50D /* GitHubUsesApiResource.swift in Sources */,
 				5E9264DA2703EAF2005F18A7 /* GitHubRepositoriesApiResource.swift in Sources */,
-				5E9264D62703E9ED005F18A7 /* UserRepositroyListVieController.swift in Sources */,
+				5E9264D62703E9ED005F18A7 /* UserRepositoryListVieController.swift in Sources */,
+				5E9264E22704294F005F18A7 /* UserRepositoryListRouter.swift in Sources */,
 				5ECC2FCA2702843F00F4F50D /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

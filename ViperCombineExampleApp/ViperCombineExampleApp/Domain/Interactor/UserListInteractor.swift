@@ -15,6 +15,9 @@ protocol UserListInteractorUseCase: AnyObject {
 
 /// UserListInteractor
 final class UserListInteractor {
+
+    // MARK: - Constants
+
     /// APIリソース
     private let resource = GitHubUsesApiResource()
 }

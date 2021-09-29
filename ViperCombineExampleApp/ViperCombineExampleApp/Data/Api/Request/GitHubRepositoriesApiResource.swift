@@ -10,8 +10,14 @@ import Foundation
 /// GitHubRepositoriesApiResource
 final class GitHubRepositoriesApiResource: ApiResource {
     typealias ResponseType = [Repository]
+
+    // MARK: - Constants
+
     /// ログイン名
     private let loginName: String
+
+    // MARK: - Variables
+
     var baseUrl: URL {
         guard let url = URL(string: "https://api.github.com") else {
             fatalError()
@@ -24,6 +30,11 @@ final class GitHubRepositoriesApiResource: ApiResource {
     var method: HttpMethod {
         return .get
     }
+
+    // MARK: - Public Methods
+
+    /// initialize
+    /// - Parameter loginName: ログイン名
     init(loginName: String) {
         self.loginName = loginName
     }
