@@ -223,20 +223,20 @@
 		5ECC2FCE27028CDE00F4F50D /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				5ECC2FCF27028CEA00F4F50D /* Request */,
+				5ECC2FCF27028CEA00F4F50D /* Resource */,
 				5ECC2FC82702842600F4F50D /* Client */,
 			);
 			path = Api;
 			sourceTree = "<group>";
 		};
-		5ECC2FCF27028CEA00F4F50D /* Request */ = {
+		5ECC2FCF27028CEA00F4F50D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				5ECC2FD027028D5B00F4F50D /* ApiResource.swift */,
 				5ECC2FE32703CDD000F4F50D /* GitHubUsesApiResource.swift */,
 				5E9264D92703EAF2005F18A7 /* GitHubRepositoriesApiResource.swift */,
 			);
-			path = Request;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		5ECC2FD22702982700F4F50D /* Presention */ = {
