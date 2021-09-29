@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E9264CE2703E4A6005F18A7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9264CD2703E4A6005F18A7 /* UserCell.swift */; };
+		5E9264D02703E4C5005F18A7 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9264CF2703E4C5005F18A7 /* UserCell.xib */; };
 		5ECC2F9827027F4600F4F50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2F9727027F4600F4F50D /* AppDelegate.swift */; };
 		5ECC2F9A27027F4600F4F50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2F9927027F4600F4F50D /* SceneDelegate.swift */; };
 		5ECC2F9C27027F4600F4F50D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC2F9B27027F4600F4F50D /* UserListViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E9264CD2703E4A6005F18A7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		5E9264CF2703E4C5005F18A7 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		5ECC2F9427027F4600F4F50D /* ViperCombineExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperCombineExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECC2F9727027F4600F4F50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECC2F9927027F4600F4F50D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 			children = (
 				5ECC2F9B27027F4600F4F50D /* UserListViewController.swift */,
 				5ECC2F9D27027F4600F4F50D /* UserListViewController.storyboard */,
+				5E9264CD2703E4A6005F18A7 /* UserCell.swift */,
+				5E9264CF2703E4C5005F18A7 /* UserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9264D02703E4C5005F18A7 /* UserCell.xib in Resources */,
 				5ECC2FA427027F4800F4F50D /* LaunchScreen.storyboard in Resources */,
 				5ECC2FA127027F4800F4F50D /* Assets.xcassets in Resources */,
 				5ECC2F9F27027F4600F4F50D /* UserListViewController.storyboard in Resources */,
@@ -386,6 +393,7 @@
 				5ECC2F9A27027F4600F4F50D /* SceneDelegate.swift in Sources */,
 				5ECC2FD827029AA500F4F50D /* RootRouter.swift in Sources */,
 				5ECC2FCD270285C200F4F50D /* User.swift in Sources */,
+				5E9264CE2703E4A6005F18A7 /* UserCell.swift in Sources */,
 				5ECC2FE12702D76B00F4F50D /* UserListInteractor.swift in Sources */,
 				5ECC2FE42703CDD000F4F50D /* GitHubUserListApiResource.swift in Sources */,
 				5ECC2FCA2702843F00F4F50D /* ApiClient.swift in Sources */,
