@@ -5,7 +5,6 @@
 //  Created by 青木孝乃輔 on 2021/09/29.
 //
 
-import Foundation
 import Combine
 
 /// UserListPresenterInput

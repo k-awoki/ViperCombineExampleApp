@@ -16,7 +16,7 @@ protocol UserListInteractorUseCase: AnyObject {
 /// UserListInteractor
 final class UserListInteractor {
     /// APIリソース
-    private let resource = GitHubUserListApiResource()
+    private let resource = GitHubUsesApiResource()
 }
 
 // MARK: - UserListInteractorUseCase
@@ -28,8 +28,8 @@ extension UserListInteractor: UserListInteractorUseCase {
             }
             ApiClinet.request(resource, completion: { result in
                 switch result {
-                case .success(let resopnse):
-                    promise(.success(resopnse))
+                case .success(let response):
+                    promise(.success(response))
                 case .failure(let error):
                     promise(.failure(error))
                 }
